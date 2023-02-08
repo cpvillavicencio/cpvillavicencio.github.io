@@ -143,6 +143,15 @@
         }
     </style>
 
+	<style>
+		/* blurry text to hide personal info */
+		#blur {
+			/*font-size: 40px;*/
+			color: transparent;
+			text-shadow: 0 0 8px #000;
+		}
+	</style>
+
     <style>
         .quoteAboutLifeLine1 {
 			font-family: 'Thasadith', cursive;
@@ -363,8 +372,8 @@
     .leftInfoEdu > .topSpacer {
         margin-top: 15px;
     }
-</style>
 <!-- WORK HISTORY end -->
+</style>
 
 </head>
 
@@ -383,7 +392,7 @@
 						<nav>
                             <a href="#homeDiv" class="headerBtn">Home</a>
 							<a href="#resumeSection" class="headerBtn">Work History</a>
-							<a href="#contactSection" class="headerBtn">Contact</a>
+							<a href="#resumeSection" class="headerBtn">Contact</a>
 						</nav>
 					</td>
 				</tr>
@@ -497,12 +506,15 @@
         <div class="bigLable">CORINA VILLAVICENCIO</div>
         <br><br>
         <div class="leftHeader">CONTACT</div><hr>
-        <div class="leftInfoContact">
+        <div class="leftInfoContact" >
+			
             <a href="mailto:cpvillavicencio@gmail.com">
                 <img src="images/email-icon-pink.png" width="20px"></img>&nbsp;&nbsp;cpvillavicencio@gmail.com</a><br>
-            <img src="images/phone-icon-pink.png" width="20px"></img>&nbsp;&nbsp;(571) 338 0622<br>
-            <img src="images/house-icon-pink.png" width="20px"></img>&nbsp;&nbsp;23225 Hales Trace Dr
-                    <div style="line-height:.5">&emsp;&nbsp;&nbsp;&nbsp; Ashburn, VA 20148</div>
+			<div id=blur>
+				<img src="images/phone-icon-pink.png" width="20px"></img>&nbsp;&nbsp;(571) 338 0622<br>
+				<img src="images/house-icon-pink.png" width="20px"></img>&nbsp;&nbsp;23225 Hales Trace Dr
+			</div>
+			<div style="line-height:.5">&emsp;&nbsp;&nbsp;&nbsp; Ashburn, VA 20148</div>
         </div>
         <br><br>
         <div class="leftHeader">EDUCATION</div><hr>
