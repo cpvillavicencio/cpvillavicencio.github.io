@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome To My Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!--link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Arvo' type='text/css'-->
+    <link rel="icon" href="images/c-icon-35a.png" type="image/icon type">
+
+    <!-- Use the Google Fonts -->
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?FAMILY:Quicksand&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Tangerine&display=swap" rel="stylesheet">
+	
+    <!-- family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=
+    font-family: 'AmaticSC', cursive;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Dawning of a New Day', cursive;
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Pacifico', cursive;
+	font-family: 'Dancing Script', cursive;
+	font-family: 'Great Vibes', cursive;
+	font-family: 'Hurricane', cursive;
+	font-family: 'Lobster Two', cursive;
+	font-family: 'Parisienne', cursive;
+	font-family: 'Quicksand', sans-serif;
+	font-family: 'Sacramento', cursive;
+	font-family: 'Shadows Into Light', cursive;
+	font-family: 'Syncopate', sans-serif;
+	font-family: 'Tangerine', cursive;
+    font-family: 'Thasadith', sans-serif;
+    -->
+
+    <style>
+        header {
+            position: sticky;
+        }
+    </style>
+
+    <style>
+        #homeDiv {
+            position: -webkit-sticky;
+            position:sticky;
+            top:0;
+            height:46px;
+            width:100%;
+            background-image: linear-gradient(to bottom right, rgba(229, 248, 185, 0.932),#f584a2, #f5688e);
+			text-align: justify;
+            padding: 3px 3px;
+        }
+
+        a:hover {color: #f5e509;font-weight: bolder;}
+
+        .headerLbl1 {
+			font-family: 'Thasadith', sans-serif;
+            font-variant: small-caps;
+			font-size: 20px;
+            color: rgba(20, 18, 18, 0.780);
+            padding-top: 3px;
+        }
+		.headerBtn {
+			font-family: 'Thasadith', sans-serif;
+			font-variant: small-caps;
+			font-size: 20px;
+			padding-top: 35px;
+			padding-right: 30px;
+            /*color: rgba(20, 18, 18, 0.780);*/
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+
+    <style>
+        .myDiv2{
+            /*border: 2px none gray;*/
+            background-color:#f5688e;
+        }
+    </style>
+    <style>
+        .myDiv3 {
+            /*border: 2px none gray;*/
+            background-color:#f5688e;
+            position: relative;
+            /*border: 20px solid white;*/
+        }
+
+        .footerSectionDivLbl {
+			/*background: #1c7284;*/
+            background-image: linear-gradient(to bottom left,#239b8b, #1c7284);
+            background-image: linear-gradient(to bottom left,#239b8b, #1c7284);
+            margin-left:25%;
+            height:80px;
+            text-align: center;
+            /*color: #efebeb;*/
+			color: #ffffff;
+            position:relative;
+            margin-top:-90px;
+            z-index:-1;
+        }
+        .footerSectionDivLbl  h1{
+            position:relative;
+            font-family: 'Thasadith', sans-serif;
+            font-size: 25px;
+            padding-top: 10px;
+        }
+        .footerSectionDivLbl  h2 {
+            font-family: 'Thasadith', sans-serif;
+            font-variant: small-caps;
+            font-size: 20px;
+            margin-top:-15px;
+        }
+    </style> 
+
+    <style>
+		.resumeSummaryDiv, .resumeEmploymentDiv {
+			background-color:white;
+			/*box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.6);*/
+			margin:0px;
+            /*font-family:'Thasadith', sans-serif;*/
+			font-family: 'Syncopate', sans-serif;
+            /*font-weight:550;*/
+            font-size:12px;
+		}
+        .resumeSectionsLabel{
+            /*width:100%;*/
+            background-color:#a2c2c4;
+			color: #395052;
+			margin:0px;
+			text-align:left;
+			font-family:'Syncopate', sans-serif;
+			font-weight: 525;
+			font-size: 16px;
+            padding-left:35px;
+			padding-top:10px;
+        }
+    </style>
+
+    <style>
+        /* icon */
+        .roundImg {
+            border-radius: 50%;
+            border-width: 3px;
+            border-color: rgb(187, 164, 164);
+            border-style: solid;
+        }
+    </style>
+
+	<style>
+		/* blurry text to hide personal info */
+		#blur {
+			/*font-size: 40px;*/
+			color: transparent;
+			text-shadow: 0 0 10px #000;
+		}
+	</style>
+	
+    <style>
+        .quoteAboutLifeLine1 {
+			font-family: 'Thasadith', cursive;
+			font-variant: small-caps;
+            font-size:30px;
+            color: white;
+            padding-top: 3px;
+        }
+    </style>
+	<style>
+        .quoteAboutLifeLine2 {
+            font-family: 'Tangerine', cursive;
+            font-size:35px;
+            color: white;
+            padding-top: 3px;
+        }
+    </style>
+	<style>
+        .quoteAboutLifeLine2 {
+            font-family: 'Tangerine', cursive;
+            font-size:35px;
+			/*font-weight:bold;*/
+            /*color: rgba(247, 243, 30, 0.863);*/
+            color: white;
+            padding-top: 3px;
+        }
+    </style>
+	<style>
+	.quoteAboutLifeLine3 {
+		font-family: 'Quicksand', sans-serif;
+		font-size:28px;
+		/*font-weight:bold;*/
+		/*color: rgba(247, 243, 30, 0.863);*/
+		color: white;
+		padding-top: 3px;
+	}
+    </style>
+
+    <style>
+        #topDiv {
+            width:100%;
+            padding: 50px 0;
+            text-align: center;
+            background-image: url("images/bram-park-banner-03.jpg");
+            background-size: cover;
+            margin-top: 0px;
+        }
+    </style>
+
+<!-- IMAGE SLIDER start -->
+<style>
+    .sliderContainer{
+    height: 350px;  /* image:300px + extra for buttons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    }
+ 
+    .slider{
+    border-radius: 5px;
+    overflow: hidden;
+    width: 240px;
+    height: 300px;
+	border: 7px solid #d9d4bb;
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.6);
+    }
+	
+	.slides{
+    width: 500%;
+    height: 300px;
+    display: flex;
+    }
+
+    .slides input{
+    display: none;
+    }
+  
+    .slide{
+		width: 20%;
+		transition: 500ms;
+    }
+  
+    .slide img{
+		width: 240px;
+		height: 300px;
+    }
+  
+	/* css for manual slide navigation */
+    .navigation-manual{
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		width: 240px;
+		margin-top: 340px;
+    }
+  
+	.manual-btn{
+		border-radius: 10px;
+		cursor: pointer;
+		transition: 500ms;  /* on hover, will transition to different border color in half a second */
+		border: 3px solid #d9d4bb;
+	    padding: 5px; /* height of manual buttons */
+		width: 25px;
+	}
+
+  .manual-btn:not(:last-child){
+    margin-right: 8px;  /* spaces between manual buttons */
+  }
+  
+  .manual-btn:hover{
+	border: 3px solid #8f7481;
+  }
+  
+  /* This will have the slide effect by simply moving the left margin of the first image */
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first{
+    margin-left: -20%;
+  }
+  
+  #radio3:checked ~ .first{
+    margin-left: -40%;
+  }
+  
+  #radio4:checked ~ .first{
+    margin-left: -60%;
+  }
+
+  #radio5:checked ~ .first{
+    margin-left: -80%;
+  }
+
+</style>
+<!-- IMAGE SLIDER end -->
+
+<!-- WORK HISTORY start -->
+<style>
+    .split {
+        z-index: 1;
+    }
+    .left {
+        position: absolute;
+        width: 25%;
+        left: 0;
+        padding-bottom:75vh;
+        margin-bottom: auto;
+        font-family: 'Thasadith', sans-serif;
+    }
+
+    .right {
+        position: inline-flex;
+        margin-left: 25%;
+        background-color: #f1f4f4;
+    }
+    .leftImgId {
+        /*border-radius: 50%;
+        border-width: 8px;
+        border-color: white;
+        border-style: solid;*/
+        width:80px;
+        margin-top: -20px;
+        float:middle;
+    }
+    .centered {
+        text-align: center;
+    }
+    .bigLabel {
+        font-family: 'Bebas Neue', cursive;
+        font-size: 50px;
+        line-height: 1;
+        color: #4d454a;
+        text-align: left;
+        margin-left: 10%;
+        padding-top: 50px;
+    }
+    .leftHeader {
+        font-family: 'Thasadith', sans-serif;
+        font-size: 25px;
+        font-weight: 600;
+        color: #4d454a;
+        text-align: left;
+        margin-left: 10%;
+        line-height: .75;
+        text-decoration: none;
+    }
+    hr {
+        height: 0x;
+        width: 50px;
+        border-top: 2px solid #464446;
+        text-align: left;
+        margin-left: 10%;
+        margin-top: 7px;
+    }
+    .leftInfoContact {
+        text-align: left;
+        margin-left: 12%;
+        line-height: 2;
+        font-weight: 501;
+    }
+    .leftInfoContact a {
+        text-decoration: none;
+    }
+    .leftInfoEdu {
+        text-align: left;
+        margin-left: 12%;
+        line-height: 1.4;
+        font-weight: 500;
+    }
+    .leftInfoEdu  h4 {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: .6;
+    }
+    .leftInfoEdu > .topSpacer {
+        margin-top: 15px;
+    }
+</style>
+<!-- WORK HISTORY end -->
+
+</head>
+
+<body>
+
+    <!--p>Click the "Try it" button to toggle between hiding and showing the DIV element:</p-->
+    <!-- button onclick="myFunction()">Try it</button -->
+	<header>
+		<div id="homeDiv"> 
+			<table width="100%" border="0">
+				<tr><td>
+						<img class="roundImg" src="images/c-icon-35a.png" width="36" alt="ID" style="float:inline-start"></img>
+						<label class="headerLbl1">Corina Villavicencio</label>
+					</td>
+					<td style="float:right">
+						<nav>
+                            <a href="#homeDiv" class="headerBtn">Home</a>
+							<a href="#resumeSection" class="headerBtn">Work History</a>
+							<a href="#contactSection" class="headerBtn">Contact</a>
+						</nav>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</header
+
+    <div class="myDiv2"> 
+        <img src="images/ella-erin-banner-001.jpg" width="100%"></img>
+    </div>
+    
+    <div class="myDiv3">
+		
+		<table width="100%" border="0">
+            <tr valign="top">
+                <td width="50%" align="right">
+					<p class="quoteAboutLifeLine1">Simple joy...&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+					<p class="quoteAboutLifeLine2">They make the &emsp;&emsp;&emsp;</p>
+					<p class="quoteAboutLifeLine3">GREATEST<span class="quoteAboutLifeLine2">&nbsp;of memories. &emsp;</span></p>
+                </td>
+                <td width = "50%" height="300">
+
+<!--container for image slider start-->
+<div class="sliderContainer">
+    <!--image slider start-->
+    <div class="slider">
+    
+		<!--automatic navigation start -->
+		<div class="slides">
+			<!--radio buttons start-->
+			<input type="radio" name="radio-btn" id="radio1" onclick="setCounter(1)">
+			<input type="radio" name="radio-btn" id="radio2" onclick="setCounter(2)">
+			<input type="radio" name="radio-btn" id="radio3" onclick="setCounter(3)">
+			<input type="radio" name="radio-btn" id="radio4" onclick="setCounter(4)">
+            <input type="radio" name="radio-btn" id="radio5" onclick="setCounter(5)">
+			<!--radio buttons end-->
+    
+			<!--slide images start-->
+			<div class="slide first"> <img id="firstImage" src="images2/2013-08-24-corie-ella-erin.jpg" alt=""> </div>
+            <div class="slide"> <img src="images2/corie-ella-erin-cox-farms-4x5.jpg" alt=""> </div>
+			<!--div class="slide"> <img src="images2/ella-erin-crazy-hair-gr1-4x5.jpg" alt=""> </div-->
+            <div class="slide"> <img src="images2/ella-erin-jack-snow.jpg" alt=""> </div>
+			<div class="slide"> <img src="images2/ella-erin-crazyhair-gr2.jpg" alt=""> </div>
+			<div class="slide"> <img src="images2/ella-erin-jack-summer21.jpg" alt=""> </div>
+			<!--slide images end-->     
+	 	</div>
+		<!--automatic navigation end-->
+
+		
+    </div> 
+    <!--image slider end-->
+	
+		<!--manual navigation start-->
+		<div class="navigation-manual">
+			<label for="radio1" class="manual-btn"></label>
+			<label for="radio2" class="manual-btn"></label>
+			<label for="radio3" class="manual-btn"></label>
+			<label for="radio4" class="manual-btn"></label>
+            <label for="radio5" class="manual-btn"></label>
+		</div>
+		<!--manual navigation end-->	
+</div>
+<!--container for image slider end-->
+
+    <!--This javascript simply automates the slideshow by checking the
+        1st to last radio button in 3 seconds interval. Goes back to the
+        1st after the 4th-->
+    <script type="text/javascript">
+    var counter = 1;
+
+        function setCounter(val)
+        {
+            /*console.log("setCounter(" + val + ")");*/
+            const manualButtonArr = document.getElementsByClassName("manual-btn");
+            /*console.log("setCounter: manualButtonArr.length=" + manualButtonArr.length);*/
+            
+            if(val > 0 && val < 6)
+            {
+                counter=val;
+                for (let i=0 ; i < manualButtonArr.length; i++)
+                {
+                    manualButtonArr[i].style.background = "";
+                }
+                manualButtonArr[val-1].style.background = "#f2f9a8";
+            }
+        }
+
+        setInterval(
+            function()
+            {
+                setCounter(counter);
+                document.getElementById('radio' + counter).checked = true;
+                counter++;
+                if(counter > 5){  counter = 1;  }
+            },
+            3000);
+    </script>
+
+                </td>
+            </tr>
+        </table>
+		<br>
+    </div>
+
+
+<div id="resumeSection" style="margin-top:2px; width:100%;">
+
+    <div class="split left">
+        <!--img class="leftImgId" src="images/c-icon-35a.png" alt="c icon"-->
+        <div class="bigLabel">CORINA VILLAVICENCIO</div>
+        <br><br>
+        <div class="leftHeader">CONTACT</div><hr>
+        <div class="leftInfoContact">
+		
+		
+            <a href="mailto:cpvillavicencio@gmail.com">
+                <img src="images/email-icon-pink.png" width="20px"></img>&nbsp;&nbsp;cpvillavicencio@gmail.com</a><br>
+			<div id="blur"> <!-- name and address are blurred and kept bogus for safety purposes -->
+				<img src="images/phone-icon-pink.png" width="20px"></img>&nbsp;&nbsp;(571) 456 7890<br>
+				<img src="images/house-icon-pink.png" width="20px"></img>&nbsp;&nbsp;43215 Street Name Dr
+			</div>
+                    <div style="line-height:.5">&emsp;&nbsp;&nbsp;&nbsp; Ashburn, VA 20148</div>			
+			</div>
+			
+			<br><br>
+			<div class="leftHeader">EDUCATION</div><hr>
+			<div class="leftInfoEdu">
+				<h6>1992</h6>
+				<div class="topSpacer">
+					<h4>Bachelor of Science in</h4>
+					<h4>Computer Engineering</h4>
+				</div>
+            <div class="topSpacer">
+                <h6>University of San Carlos - Technological Center</h6>
+                <h7>Cebu, Philippines</h7>
+            </div>
+        </div>
+    </div>
+
+    <div class="split"> <!-- split right start -->
+        <div class="resumeSummaryDiv right">
+            <h4 class="resumeSectionsLabel">PROFESSIONAL SUMMARY</h4>
+            <div style="margin-left:35px;">
+                <p>Computer Engineering professional with over 15 years of work experience in developing and maintaining
+                software using C/C++ in the Unix, Linux and Windows environments. With working knowledge of the following:</p>
+            </div>
+            <div style="padding-left:70px;padding-bottom:10px">
+                <ul>
+                    <li>C++, C, Java Programming Languages</li>
+                    <li>Unix Shell Script, Perl, Tcl/Tk, Expect, WinBatch Scripting languages</li>
+                    <li>Fedora, Red Hat, FreeBSD, Solaris, SunOS, HP-UX, AIX, Windows Operating Systems</li>
+                    <li>Oracle SQL, MySQL, PostgreSQL Databases</li>
+                    <li>HTML, JavaScript</li>
+                    <li>Intel® Integrated Performance Primitives, Libtiff Image Libraries</li>
+                    <li>Standard Template Library</li>
+                    <li>BroadVision One-To-One Commerce</li>
+                    <li>Object-Oriented Analysis/Design</li>
+                    <li>QT, Motif Graphical User Interface Libraries</li>
+                    <li>KEYLOK, Sentinel SuperPro Security Dongles</li>
+                    <li>GDB, Valgrind, JProfiler, Purify Memory Diagnostics/Debugging Tools</li>
+                    <li>Subversion, Visual SourceSafe, ClearCase, Harvest, CVS Source Control Tools</li>
+                    <li>KDevelop, Visual Studio, Eclipse, vi Editors, Notepad++</li>
+                </ul>
+            </div>
+        </div>
+
+
+	<style>
+		.employmentHistory {
+			padding-top: 18px;
+			padding-left: 35px;
+		}
+		.employmentHistory > h4 {
+			font-weight: bold;
+		}
+		.employerRow {
+			font-style: italic;
+			font-weight: bold;
+			font-size: 14px;
+			color: #1c948d;
+		}
+		.employerName {
+			float: left;
+			width: 60%;
+		}
+		.employmentYr {
+			float: right;
+			padding-right: 20px;
+		}
+		.employerRow:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+		.jobYear {
+			width:30%;
+			font-style: none;
+			padding-right: 2%;
+		}
+		.jobLabel {
+			clear: both;
+			font-weight: bold;
+			position: inline-flex;
+		}
+		.jobLabelEntry {
+			font-weight: normal;
+		}
+		.jobCollapsibleSection {
+			background-color: #d7e4e1;
+			color: black;
+			cursor: pointer;
+			text-align: left;
+			border: none;
+			padding-left: 0;
+			width: 100%;
+
+		}
+		.jobCollasibleActive, .jobCollapsibleSection:hover {
+			background-color: #feffdc;
+		}
+		.jobCollapsibleContent {
+			/*
+			display: none;
+			overflow: hidden;
+			background-color: #f1f1f1;
+			*/
+			  display: -webkit-box;
+			  -webkit-line-clamp: 3;
+			  -webkit-box-orient: vertical;  
+			  overflow: hidden;
+			  hyphens: auto;
+		}
+
+	</style>
+
+        <div class="resumeEmploymentDiv right">
+            <h4 class="resumeSectionsLabel">EMPLOYMENT HISTORY</h4>
+            <div class="employmentHistory">
+				<div class="employerRow">
+					<div class="employerName">Applied Visual Sciences, Inc. | Herndon, VA</div>
+					<div class="employmentYr">2005 - 2010</div>
+				</div>
+                <div class="jobLabel">Project: &nbsp;
+                     <span class="jobLabelEntry">Airport Security and Healthcare Applications</span></div>
+                <div class="jobLabel">Role: &nbsp; <span class="jobLabelEntry">Systems Developer </span></div>
+				
+                <button type="button" class="jobCollapsibleSection jobLabel">Responsibilities: </button>
+                <div class="jobCollapsibleContent">
+					<p>Provided technical support to Guardian’s software engineering department’s programming activities which include 
+					but not limited to the development and maintenance of PinPoint Threat Identification software, Signature Mapping 
+					detection and visualization applications, nSight dynamically linked library (DLL) and Image Processing Engines (IPE). 
+					Performed development and maintenance of QT-based in-house tools used for image collection, scanning device simulation, 
+					testing, scoring and performance validation. Implemented the Support Vector Machine (SVM) and Decision Tree detection 
+					models. Implemented various imaging filters using Intel IPP (Integrated Performance Primitive) library. Added MySQL 
+					database support to PinPoint and in-house tools. Added Tiff image format support into the common image library. Added 
+					the AOI (area-of-interest) and AOILIST data types and their associated application programming interfaces (APIs) to 
+					the Guardian’s proprietary TAL (Threat Assessment Language) scripting language. Provided assistance to the Research 
+					Department’s TAL scripting needs. Responsible for the evaluation of commercial piracy protection software and the 
+					integration of the KEYLOK and Sentinel SuperPro security dongles into PinPoint. Was involved in the porting of core 
+					libraries and in-house tools from FreeBSD to Fedora and Windows XP platforms. Was involved in the migration of the 
+					core libraries and in-house tools to higher versions of Intel IPP and QT libraries.</p>
+				</div>
+            </div>
+        </div>
+
+    </div>  <!-- split right end -->
+
+</div>
+
+<div id="contactSection" style="padding-bottom:50px"></div>
+
+<footer>
+    <div class="footerSectionDiv" style="width:100%; height:80px; position:inline-flex">
+        <img src="images/erin-art-002d.jpg" width="25%" height="80px" style="position:absolute;z-index:-1;"></img>
+        <img src="images/coie-bw-id-sm-00.jpg" height="80px"
+         style="margin-left:22%;border-radius:50%;border-width:7px;border-color:rgba(248, 244, 244, 0.393);border-style:solid;"></img>
+		<div class="footerSectionDivLbl">
+			<h1>CORINA VILLAVICENCIO</h1>
+			<h2>Software Developer</h2>
+		</div>
+	</div>
+</footer>
+
+
+<script type="text/javascript">
+
+	<!-- Slideshow - start -->
+	<!-- This javascript simply automates the slideshow by checking the
+		1st to last radio button in 3 seconds interval. Goes back to the
+		1st after the 4th -->
+	var counter = 1;
+
+	function setCounter(val)
+	{
+		/*console.log("setCounter(" + val + ")");*/
+		const manualButtonArr = document.getElementsByClassName("manual-btn");
+		/*console.log("setCounter: manualButtonArr.length=" + manualButtonArr.length);*/
+		
+		if(val > 0 && val < 6)
+		{
+			counter=val;
+			for (let i=0 ; i < manualButtonArr.length; i++)
+			{
+				manualButtonArr[i].style.background = "";
+			}
+			manualButtonArr[val-1].style.background = "#f2f9a8";
+		}
+	}
+
+	setInterval(
+		function()
+		{
+			setCounter(counter);
+			document.getElementById('radio' + counter).checked = true;
+			counter++;
+			if(counter > 5){  counter = 1;  }
+		},
+		3000);
+	<!-- Slideshow - end -->
+	
+	<!-- Collapsible Resume Entries - start -->
+	var collapsibleArray = document.getElementsByClassName("jobCollapsibleSection");
+	var i;
+	var htmlElement;
+	
+	for (i = 0; i < collapsibleArray.length; i++) {
+		htmlElement = collapsibleArray[i];
+		htmlElement.addEventListener("click", function() {
+			this.classList.toggle("jobCollasibleActive");
+			var contentElement = this.nextElementSibling;
+			if (contentElement.style.display === "block" ) {
+				contentElement.style.display = "none";
+			}
+			else {
+				contentElement.style.display = "none";
+			}
+		}
+	}
+	<!-- Collapsible Resume Entries - end -->
+	
+</script>
+	
+</body>
+</html>
