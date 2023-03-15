@@ -1,0 +1,27 @@
+.footerSectionDivLbl {
+	/*background: #1c7284;*/
+    background-image: linear-gradient(to bottom left,#239b8b, #1c7284);
+    background-image: linear-gradient(to bottom left,#239b8b, #1c7284);
+    margin-left:25%;
+    height:80px;
+    text-align: center;
+    /*color: #efebeb;*/
+	color: #ffffff;
+    position:relative;
+    margin-top:-90px;
+    z-index:-1;
+}
+
+.footerSectionDivLbl  h1{
+    position:relative;
+    font-family: 'Thasadith', sans-serif;
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+.footerSectionDivLbl  h2 {
+    font-family: 'Thasadith', sans-serif;
+    font-variant: small-caps;
+    font-size: 20px;
+    margin-top:-15px;
+}

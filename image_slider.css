@@ -1,0 +1,76 @@
+﻿
+.sliderContainer {
+    height: 350px; /* image:300px + extra for buttons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.slider {
+    border-radius: 5px;
+    overflow: hidden;
+    width: 240px;
+    height: 300px;
+    border: 7px solid #d9d4bb;
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.6);
+}
+
+.slides {
+    width: 500%;
+    height: 300px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 500ms;
+}
+
+.slide img {
+    width: 240px;
+    height: 300px;
+}
+
+.manual-btn {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 500ms; /* on hover, will transition to different border color in half a second */
+    border: 3px solid #d9d4bb;
+    padding: 5px; /* height of manual buttons */
+    width: 25px;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 8px; /* spaces between manual buttons */
+}
+
+.manual-btn:hover {
+    border: 3px solid #8f7481;
+}
+
+/* This will have the slide effect by simply moving the left margin of the first image */
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+
+#radio5:checked ~ .first {
+    margin-left: -80%;
+}
