@@ -12,655 +12,785 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?FAMILY:Quicksand&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Tangerine&display=swap" rel="stylesheet">
-	
+
     <!-- family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=
     font-family: 'AmaticSC', cursive;
     font-family: 'Bebas Neue', cursive;
     font-family: 'Dawning of a New Day', cursive;
     font-family: 'Indie Flower', cursive;
     font-family: 'Pacifico', cursive;
-	font-family: 'Dancing Script', cursive;
-	font-family: 'Great Vibes', cursive;
-	font-family: 'Hurricane', cursive;
-	font-family: 'Lobster Two', cursive;
-	font-family: 'Parisienne', cursive;
-	font-family: 'Quicksand', sans-serif;
-	font-family: 'Sacramento', cursive;
-	font-family: 'Shadows Into Light', cursive;
-	font-family: 'Syncopate', sans-serif;
-	font-family: 'Tangerine', cursive;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Great Vibes', cursive;
+    font-family: 'Hurricane', cursive;
+    font-family: 'Lobster Two', cursive;
+    font-family: 'Parisienne', cursive;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Sacramento', cursive;
+    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Syncopate', sans-serif;
+    font-family: 'Tangerine', cursive;
     font-family: 'Thasadith', sans-serif;
     -->
 
-    <style>
-        header {
-            position: sticky;
-        }
-    </style>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="image_slider.css">
+    <link rel="stylesheet" href="footer.css">
 
     <style>
-        #homeDiv {
-            position: -webkit-sticky;
-            position:sticky;
-            top:0;
-            height:46px;
-            width:100%;
-            background-image: linear-gradient(to bottom right, rgba(229, 248, 185, 0.932),#f584a2, #f5688e);
-			text-align: justify;
-            padding: 3px 3px;
-        }
+        /* For some reason, moving the myDiv3 and/or navigation-manual
+         * css to the external image_slider.css breaks the page color and/layout
+         */
 
-        a:hover {color: #f5e509;font-weight: bolder;}
-
-        .headerLbl1 {
-			font-family: 'Thasadith', sans-serif;
-            font-variant: small-caps;
-			font-size: 20px;
-            color: rgba(20, 18, 18, 0.780);
-            padding-top: 3px;
-        }
-		.headerBtn {
-			font-family: 'Thasadith', sans-serif;
-			font-variant: small-caps;
-			font-size: 20px;
-			padding-top: 40px;
-			padding-right: 30px;
-            /*color: rgba(20, 18, 18, 0.780);*/
-            color: white;
-            text-decoration: none;
-        }
-    </style>
-
-    <style>
-        .myDiv2{
-            /*border: 2px none gray;*/
-            background-color:#f5688e;
-        }
-    </style>
-    <style>
+        /* myDiv3 - where the image slider is */
         .myDiv3 {
-            /*border: 2px none gray;*/
-            background-color:#f5688e;
+            background-color: #f5688e;
             position: relative;
-            /*border: 20px solid white;*/
+            padding-top: 25px;
+            padding-bottom: 45px;
         }
 
-        .footerSectionDivLbl {
-            /*background-image: linear-gradient(to bottom left,#239b8b, #1c7284);*/
-            background: #1c7284;
-            margin-left:25%;
-            height:80px;
-            text-align: center;
-            color: #efebeb;
-            position:relative;
-            margin-top:-90px;
-            z-index:-1;
+        /* manual buttons for the image slider */
+        .navigation-manual {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            width: 240px;
+            margin-top: 1px;
         }
-        .footerSectionDivLbl  h1{
-            position:relative;
-            font-family: 'Thasadith', sans-serif;
-            font-size: 25px;
+
+        .resumeSummaryDiv, .resumeEmploymentDiv {
+            /*background-color: white;*/
+            /*box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.6);*/
+            margin: 0px;
+            /*font-family:'Thasadith', sans-serif;*/
+            font-family: 'Syncopate', sans-serif;
+            /*font-weight:550;*/
+            font-size: 14px;
+        }
+
+        .resumeSectionsLabel {
+            /*width:100%;*/
+            background-color: #a2c2c4;
+            color: #395052;
+            margin: 0px;
+            text-align: left;
+            font-family: 'Syncopate', sans-serif;
+            font-weight: 525;
+            font-size: 16px;
+            padding-left: 35px;
             padding-top: 10px;
         }
-        .footerSectionDivLbl  h2 {
+
+        /* blurry text to hide personal info */
+        #blur {
+            /*font-size: 40px;*/
+            color: transparent;
+            text-shadow: 0 0 10px #000;
+        }
+
+        .split {
+            z-index: 1;
+        }
+
+        .left {
+            position: absolute;
+            width: 25%;
+            left: 0;
+            /*padding-bottom: 75vh;*/
+            /*margin-bottom: auto;*/
             font-family: 'Thasadith', sans-serif;
-            font-variant: small-caps;
-            font-size: 20px;
-            margin-top:-15px;
         }
-    </style> 
 
-    <style>
-		.resumeSummaryDiv, .resumeEmploymentDiv {
-			background-color:white;
-			/*box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.6);*/
-			margin:0px;
-            font-family:'Thasadith', sans-serif;
-            font-weight:550;
-            font-size:larger;
-		}
-        .resumeSectionsLabel{
-            /*width:100%;*/
-            background-color:#a2c2c4;
-			color: #395052;
-			margin:0px;
-			text-align:left;
-			font-family:'Thasadith', sans-serif;
-			font-weight:bold;
-			font-size:larger;
-            padding-left:40px;
-			padding-top:10px;
+        .right {
+            margin-left: 25%;
+            background-color: #f1f4f4;
         }
-    </style>
 
-    <style>
-        /* icon */
-        .roundImg {
-            border-radius: 50%;
-            border-width: 3px;
-            border-color: rgb(187, 164, 164);
-            border-style: solid;
+        .leftImgId {
+            width: 80px;
+            margin-top: -20px;
+            float: left;
         }
-    </style>
 
-	<style>
-		/* blurry text to hide personal info */
-		#blur {
-			/*font-size: 40px;*/
-			color: transparent;
-			text-shadow: 0 0 8px #000;
-		}
-	</style>
-
-    <style>
-        .quoteAboutLifeLine1 {
-			font-family: 'Thasadith', cursive;
-			font-variant: small-caps;
-            font-size:30px;
-            color: white;
-            padding-top: 3px;
+        .bigLabel {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            line-height: 1;
+            color: #4d454a;
+            text-align: left;
+            margin-left: 10%;
+            padding-top: 50px;
         }
-    </style>
-	<style>
-        .quoteAboutLifeLine2 {
-            font-family: 'Tangerine', cursive;
-            font-size:35px;
-            color: white;
-            padding-top: 3px;
+
+        .leftHeader {
+            font-family: 'Thasadith', sans-serif;
+            font-size: 25px;
+            font-weight: 600;
+            color: #4d454a;
+            text-align: left;
+            margin-left: 10%;
+            line-height: .75;
+            text-decoration: none;
         }
-    </style>
-	<style>
-        .quoteAboutLifeLine2 {
-            font-family: 'Tangerine', cursive;
-            font-size:35px;
-			/*font-weight:bold;*/
-            /*color: rgba(247, 243, 30, 0.863);*/
-            color: white;
-            padding-top: 3px;
+
+        hr {
+            height: 0px;
+            width: 50px;
+            border-top: 2px solid #464446;
+            text-align: left;
+            margin-left: 10%;
+            margin-top: 7px;
         }
-    </style>
-	<style>
-	.quoteAboutLifeLine3 {
-		font-family: 'Quicksand', sans-serif;
-		font-size:28px;
-		/*font-weight:bold;*/
-		/*color: rgba(247, 243, 30, 0.863);*/
-		color: white;
-		padding-top: 3px;
-	}
-    </style>
 
-    <style>
-        #topDiv {
-            width:100%;
-            padding: 50px 0;
-            text-align: center;
-            background-image: url("images/bram-park-banner-03.jpg");
-            background-size: cover;
-            margin-top: 0px;
+        .leftInfoContact {
+            text-align: left;
+            margin-left: 12%;
+            line-height: 2;
+            font-weight: 500;
         }
+
+            .leftInfoContact a {
+                text-decoration: none;
+            }
+
+        .leftInfoEdu {
+            text-align: left;
+            margin-left: 12%;
+            line-height: 1.4;
+            font-weight: 500;
+        }
+
+            .leftInfoEdu h4 {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: .6;
+            }
+
+            .leftInfoEdu > .topSpacer {
+                margin-top: 15px;
+            }
     </style>
-
-<!-- IMAGE SLIDER start -->
-<style>
-    .sliderContainer{
-    height: 350px;  /* image:300px + extra for buttons */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    }
- 
-    .slider{
-    border-radius: 5px;
-    overflow: hidden;
-    width: 240px;
-    height: 300px;
-	border: 7px solid #d9d4bb;
-    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.6);
-    }
-	
-	.slides{
-    width: 500%;
-    height: 300px;
-    display: flex;
-    }
-
-    .slides input{
-    display: none;
-    }
-  
-    .slide{
-		width: 20%;
-		transition: 500ms;
-    }
-  
-    .slide img{
-		width: 240px;
-		height: 300px;
-    }
-  
-	/* css for manual slide navigation */
-    .navigation-manual{
-		position: absolute;
-		display: flex;
-		justify-content: center;
-		width: 240px;
-		margin-top: 340px;
-    }
-  
-	.manual-btn{
-		border-radius: 10px;
-		cursor: pointer;
-		transition: 500ms;  /* on hover, will transition to different border color in half a second */
-		border: 3px solid #d9d4bb;
-	    padding: 5px; /* height of manual buttons */
-		width: 25px;
-	}
-
-  .manual-btn:not(:last-child){
-    margin-right: 8px;  /* spaces between manual buttons */
-  }
-  
-  .manual-btn:hover{
-	border: 3px solid #8f7481;
-  }
-  
-  /* This will have the slide effect by simply moving the left margin of the first image */
-  #radio1:checked ~ .first{
-    margin-left: 0;
-  }
-  
-  #radio2:checked ~ .first{
-    margin-left: -20%;
-  }
-  
-  #radio3:checked ~ .first{
-    margin-left: -40%;
-  }
-  
-  #radio4:checked ~ .first{
-    margin-left: -60%;
-  }
-
-  #radio5:checked ~ .first{
-    margin-left: -80%;
-  }
-
-</style>
-<!-- IMAGE SLIDER end -->
-
-<!-- WORK HISTORY start -->
-<style>
-    .split {
-        z-index: 1;
-    }
-    .left {
-        position: absolute;
-        width: 25%;
-        left: 0;
-        padding-bottom:75vh;
-        margin-bottom: auto;
-        font-family: 'Thasadith', sans-serif;
-    }
-
-    .right {
-        position: inline-flex;
-        margin-left: 25%;
-        background-color: #f1f4f4;
-    }
-    .leftImgId {
-        /*border-radius: 50%;
-        border-width: 8px;
-        border-color: white;
-        border-style: solid;*/
-        width:80px;
-        margin-top: -20px;
-        float:middle;
-    }
-    .centered {
-        text-align: center;
-    }
-    .bigLable {
-        font-family: 'Bebas Neue', cursive;
-        font-size: 50px;
-        line-height: 1;
-        color: #4d454a;
-        text-align: left;
-        margin-left: 10%;
-        padding-top: 50px;
-    }
-    .leftHeader {
-        font-family: 'Thasadith', sans-serif;
-        font-size: 25px;
-        font-weight: 600;
-        color: #4d454a;
-        text-align: left;
-        margin-left: 10%;
-        line-height: .75;
-        text-decoration: none;
-    }
-    hr {
-        height: 0x;
-        width: 50px;
-        border-top: 2px solid #464446;
-        text-align: left;
-        margin-left: 10%;
-        margin-top: 7px;
-    }
-    .leftInfoContact {
-        text-align: left;
-        margin-left: 12%;
-        line-height: 2;
-        font-weight: 501;
-    }
-    .leftInfoContact a {
-        text-decoration: none;
-    }
-    .leftInfoEdu {
-        text-align: left;
-        margin-left: 12%;
-        line-height: 1.4;
-        font-weight: 500;
-    }
-    .leftInfoEdu  h4 {
-        font-size: 16px;
-        font-weight: 600;
-        line-height: .6;
-    }
-    .leftInfoEdu > .topSpacer {
-        margin-top: 15px;
-    }
-<!-- WORK HISTORY end -->
-</style>
-
 </head>
 
 <body>
+    <header>
+        <div id="homeDiv">
+            <table width="100%" border="0">
+                <tr>
+                    <td>
+                        <img class="roundImg" src="images/c-icon-35a.png" width="36" alt="ID" style="float:inline-start">
+                        <label class="headerLbl1">Corina Villavicencio</label>
+                    </td>
+                    <td style="float:right">
+                        <nav>
+                            <!--a href="#homeDiv" class="headerBtn">Home</a-->
+                            <a href="#resumeSection" class="headerBtn">Work History</a>
+                            <a href="#resumeSection" class="headerBtn">Contact</a>
+                        </nav>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </header>
 
-    <!--p>Click the "Try it" button to toggle between hiding and showing the DIV element:</p-->
-    <!-- button onclick="myFunction()">Try it</button -->
-	<header>
-		<div id="homeDiv"> 
-			<table width="100%" border="0">
-				<tr><td>
-						<img class="roundImg" src="images/c-icon-35a.png" width="36" alt="ID" style="float:inline-start"></img>
-						<label class="headerLbl1">Corina Villavicencio</label>
-					</td>
-					<td style="float:right">
-						<nav>
-                            <a href="#homeDiv" class="headerBtn">Home</a>
-							<a href="#resumeSection" class="headerBtn">Work History</a>
-							<a href="#resumeSection" class="headerBtn">Contact</a>
-						</nav>
-					</td>
-				</tr>
-			</table>
-		</div>
-	</header
-
-    <div class="myDiv2"> 
-        <img src="images/ella-erin-banner-001.jpg" width="100%"></img>
+    <div class="myDiv2">
+        <img src="images/ella-erin-banner-001.jpg" width="100%">
+        <!--img src="images/ella-erin-banner-001.jpg" style="height:100px;display:block;"-->
     </div>
-    
+
     <div class="myDiv3">
-		
-		<table width="100%" border="0">
+        <table width="100%" border="0">
             <tr valign="top">
                 <td width="50%" align="right">
-					<p class="quoteAboutLifeLine1">Simple joy...&emsp;&emsp;&emsp;&emsp;&emsp;</p>
-					<p class="quoteAboutLifeLine2">They make the &emsp;&emsp;&emsp;</p>
-					<p class="quoteAboutLifeLine3">GREATEST<span class="quoteAboutLifeLine2">&nbsp;of memories. &emsp;</span></p>
+                    <p class="quoteAboutLifeLine1">Simple joy...&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+                    <p class="quoteAboutLifeLine2">They make the &emsp;&emsp;&emsp;</p>
+                    <p class="quoteAboutLifeLine3">GREATEST<span class="quoteAboutLifeLine2">&nbsp;of memories. &emsp;</span></p>
                 </td>
-                <td width = "50%" height="300">
+                <td width="50%" height="300" align="center">
 
-<!--container for image slider start-->
-<div class="sliderContainer">
-    <!--image slider start-->
-    <div class="slider">
-    
-		<!--automatic navigation start -->
-		<div class="slides">
-			<!--radio buttons start-->
-			<input type="radio" name="radio-btn" id="radio1" onclick="setCounter(1)">
-			<input type="radio" name="radio-btn" id="radio2" onclick="setCounter(2)">
-			<input type="radio" name="radio-btn" id="radio3" onclick="setCounter(3)">
-			<input type="radio" name="radio-btn" id="radio4" onclick="setCounter(4)">
-            <input type="radio" name="radio-btn" id="radio5" onclick="setCounter(5)">
-			<!--radio buttons end-->
-    
-			<!--slide images start-->
-			<div class="slide first"> <img id="firstImage" src="images2/2013-08-24-corie-ella-erin.jpg" alt=""> </div>
-            <div class="slide"> <img src="images2/corie-ella-erin-cox-farms-4x5.jpg" alt=""> </div>
-			<!--div class="slide"> <img src="images2/ella-erin-crazy-hair-gr1-4x5.jpg" alt=""> </div-->
-            <div class="slide"> <img src="images2/ella-erin-jack-snow.jpg" alt=""> </div>
-			<div class="slide"> <img src="images2/ella-erin-crazyhair-gr2.jpg" alt=""> </div>
-			<div class="slide"> <img src="images2/ella-erin-jack-summer21.jpg" alt=""> </div>
-			<!--slide images end-->     
-	 	</div>
-		<!--automatic navigation end-->
+                    <!--container for image slider start-->
+                    <div class="sliderContainer">
 
-		
-    </div> 
-    <!--image slider end-->
-	
-		<!--manual navigation start-->
-		<div class="navigation-manual">
-			<label for="radio1" class="manual-btn"></label>
-			<label for="radio2" class="manual-btn"></label>
-			<label for="radio3" class="manual-btn"></label>
-			<label for="radio4" class="manual-btn"></label>
-            <label for="radio5" class="manual-btn"></label>
-		</div>
-		<!--manual navigation end-->
-		
-</div>
-<!--container for image slider end-->
+                        <!--image slider start-->
 
-    <!--This javascript simply automates the slideshow by checking the
-        1st to last radio button in 3 seconds interval. Goes back to the
-        1st after the 4th-->
-    <script type="text/javascript">
-    var counter = 1;
+                        <div class="slider">
 
-        function setCounter(val)
-        {
-            /*console.log("setCounter(" + val + ")");*/
-            const manualButtonArr = document.getElementsByClassName("manual-btn");
-            /*console.log("setCounter: manualButtonArr.length=" + manualButtonArr.length);*/
-            
-            if(val > 0 && val < 6)
-            {
-                counter=val;
-                for (let i=0 ; i < manualButtonArr.length; i++)
-                {
-                    manualButtonArr[i].style.background = "";
-                }
-                manualButtonArr[val-1].style.background = "#f2f9a8";
-            }
-        }
+                            <!--automatic navigation start -->
+                            <div class="slides">
+                                <!--radio buttons start-->
+                                <input type="radio" name="radio-btn" id="radio1" onclick="setCounter(1)">
+                                <input type="radio" name="radio-btn" id="radio2" onclick="setCounter(2)">
+                                <input type="radio" name="radio-btn" id="radio3" onclick="setCounter(3)">
+                                <input type="radio" name="radio-btn" id="radio4" onclick="setCounter(4)">
+                                <input type="radio" name="radio-btn" id="radio5" onclick="setCounter(5)">
+                                <!--radio buttons end-->
+                                <!--slide images start-->
+                                <div class="slide first"> <img id="firstImage" src="images2/2013-08-24-corie-ella-erin.jpg" alt=""> </div>
+                                <div class="slide"> <img src="images2/corie-ella-erin-cox-farms-4x5.jpg" alt=""> </div>
+                                <div class="slide"> <img src="images2/ella-erin-jack-snow.jpg" alt=""> </div>
+                                <div class="slide"> <img src="images2/ella-erin-crazyhair-gr2.jpg" alt=""> </div>
+                                <div class="slide"> <img src="images2/ella-erin-jack-summer21.jpg" alt=""> </div>
+                                <!--slide images end-->
+                            </div> <!-- "slides" -->
+                            <!--manual navigation start-->
+                            <div class="navigation-manual">
+                                <label for="radio1" class="manual-btn"></label>
+                                <label for="radio2" class="manual-btn"></label>
+                                <label for="radio3" class="manual-btn"></label>
+                                <label for="radio4" class="manual-btn"></label>
+                                <label for="radio5" class="manual-btn"></label>
+                            </div> <!-- "navigation-manual" -->
 
-        setInterval(
-            function()
-            {
-                setCounter(counter);
-                document.getElementById('radio' + counter).checked = true;
-                counter++;
-                if(counter > 5){  counter = 1;  }
-            },
-            3000);
-    </script>
+                        </div> <!-- "slider" -->
+                    </div> <!-- "sliderContainer" -->
 
                 </td>
             </tr>
         </table>
-		<br>
-    </div>
+    </div> <!-- "myDiv3" -->
 
 
-<div id="resumeSection" style="margin-top:2px; width:100%;">
+    <div id="resumeSection" style="margin-top:2px; width:100%;">
 
-    <div class="split left">
-        <!--img class="leftImgId" src="images/c-icon-35a.png" alt="c icon"-->
-        <div class="bigLable">CORINA VILLAVICENCIO</div>
-        <br><br>
-        <div class="leftHeader">CONTACT</div><hr>
-        <div class="leftInfoContact" >
-			
-            <a href="mailto:cpvillavicencio@gmail.com">
-                <img src="images/email-icon-pink.png" width="20px"></img>&nbsp;&nbsp;cpvillavicencio@gmail.com</a><br>
-			<div id=blur>
-				<img src="images/phone-icon-pink.png" width="20px"></img>&nbsp;&nbsp;(571) 338 0622<br>
-				<img src="images/house-icon-pink.png" width="20px"></img>&nbsp;&nbsp;23225 Hales Trace Dr
-			</div>
-			<div style="line-height:.5">&emsp;&nbsp;&nbsp;&nbsp; Ashburn, VA 20148</div>
-        </div>
-        <br><br>
-        <div class="leftHeader">EDUCATION</div><hr>
-        <div class="leftInfoEdu">
-            <h6>1992</h6>
-            <div class="topSpacer">
-                <h4>Bachelor of Science in</h4>
-                <h4>Computer Engineering</h4>
+        <div class="split left">
+            <!--img class="leftImgId" src="images/c-icon-35a.png" alt="c icon"-->
+            <div class="bigLabel">CORINA VILLAVICENCIO</div>
+            <br><br>
+            <div class="leftHeader">CONTACT</div><hr>
+            <div class="leftInfoContact">
+
+
+                <a href="mailto:cpvillavicencio@gmail.com">
+                    <img src="images/email-icon-pink.png" width="20px">&nbsp;&nbsp;cpvillavicencio@gmail.com
+                </a><br>
+                <div id="blur">
+                    <!-- name and address are blurred and kept bogus for safety purposes -->
+                    <img src="images/phone-icon-pink.png" width="20px">&nbsp;&nbsp;(571) 456 7890<br>
+                    <img src="images/house-icon-pink.png" width="20px">&nbsp;&nbsp;43215 Street Name Dr
+                </div>
+                <div style="line-height:.5">&emsp;&nbsp;&nbsp;&nbsp; Ashburn, VA 20148</div>
             </div>
-            <div class="topSpacer">
-                <h6>University of San Carlos - Technological Center</h6>
-                <h7>Cebu, Philippines</h7>
-            </div>
-        </div>
-        
-    </div>
 
-    <div class="split"> <!-- split right start -->
-        <div class="resumeSummaryDiv right">
-            <h4 class="resumeSectionsLabel">PROFESSIONAL SUMMARY</h4>
-            <div style="margin-left:40px;">
-                <p>Computer Engineering professional with over 15 years of work experience in developing and maintaining
-                software using C/C++ in the Unix, Linux and Windows environments. With working knowledge of the following:</p>
-            </div>
-            <div style="padding-left:70px;padding-bottom:10px">
-                <ul>
-                    <li>C++, C, Java Programming Languages</li>
-                    <li>Unix Shell Script, Perl, Tcl/Tk, Expect, WinBatch Scripting languages</li>
-                    <li>Fedora, Red Hat, FreeBSD, Solaris, SunOS, HP-UX, AIX, Windows Operating Systems</li>
-                    <li>Oracle SQL, MySQL, PostgreSQL Databases</li>
-                    <li>HTML, JavaScript</li>
-                    <li>Intel® Integrated Performance Primitives, Libtiff Image Libraries</li>
-                    <li>Standard Template Library</li>
-                    <li>BroadVision One-To-One Commerce</li>
-                    <li>Object-Oriented Analysis/Design</li>
-                    <li>QT, Motif Graphical User Interface Libraries</li>
-                    <li>KEYLOK, Sentinel SuperPro Security Dongles</li>
-                    <li>GDB, Valgrind, JProfiler, Purify Memory Diagnostics/Debugging Tools</li>
-                    <li>Subversion, Visual SourceSafe, ClearCase, Harvest, CVS Source Control Tools</li>
-                    <li>KDevelop, Visual Studio, Eclipse, vi Editors, Notepad++</li>
-                </ul>
+            <br><br>
+            <div class="leftHeader">EDUCATION</div><hr>
+            <div class="leftInfoEdu">
+                <h6>1992</h6>
+                <div class="topSpacer">
+                    <h4>Bachelor of Science in</h4>
+                    <h4>Computer Engineering</h4>
+                </div>
+                <div class="topSpacer">
+                    <h6>University of San Carlos - Technological Center</h6>
+                    <h7>Cebu, Philippines</h7>
+                </div>
             </div>
         </div>
 
-
-<style>
-    .employmentHistory {
-        padding-top: 18px;
-        padding-left: 40px;
-    }
-    .employmentHistory > h4 {
-        font-weight: bold;
-    }
-    .jobLabel {
-        clear: both;
-        font-weight: bold;
-        position: inline-flex;
-    }
-    .employer {
-        font-style: italic;
-        font-weight:900;  /*don't work */
-        color:rgb(184, 22, 111);
-        /*width:70%;*/
-    }
-    .jobYear {
-        float: right;
-        padding-right: 10px;
-    }
-    .employerLoc {
-        /*width:30%;*/
-        color:rgb(184, 22, 111);
-        padding-bottom: 7px;
-    }
-    .resumeInfo {
-        font-weight:900;  /*don't work */
-        color:rgb(184, 22, 111);
-    }
-
-
-</style>
-
-        <div class="resumeEmploymentDiv right">
-            <h4 class="resumeSectionsLabel">EMPLOYMENT HISTORY</h4>
-            <div class="employmentHistory">
-			
-                <div class="employer">Applied Visual Sciences, Inc. (formerly, Guardian Technology International, Inc.)
-                    &emsp14; &emsp14; &emsp14; &emsp14; &emsp14;
-                    <span class="jobYear">2005 - 2010</span></div>
-                <div class="employerLoc">Herndon, VA </div>
-                <div class="jobLabel">Project: &nbsp;
-                    <span>Airport Security and Healthcare Applications</span></div>
-                <div class="jobLabel">Role: &nbsp;
-                    <span>Systems Developer</span></div>
-                <div class="jobLabel">Responsibilities: </div>
-                <div class="responsibilities">Provided technical support to Guardian’s software engineering department’s programming activities which include 
-                but not limited to the development and maintenance of PinPoint Threat Identification software, Signature Mapping 
-                detection and visualization applications, nSight dynamically linked library (DLL) and Image Processing Engines (IPE). 
-                Performed development and maintenance of QT-based in-house tools used for image collection, scanning device simulation, 
-                testing, scoring and performance validation. Implemented the Support Vector Machine (SVM) and Decision Tree detection 
-                models. Implemented various imaging filters using Intel IPP (Integrated Performance Primitive) library. Added MySQL 
-                database support to PinPoint and in-house tools. Added Tiff image format support into the common image library. Added 
-                the AOI (area-of-interest) and AOILIST data types and their associated application programming interfaces (APIs) to 
-                the Guardian’s proprietary TAL (Threat Assessment Language) scripting language. Provided assistance to the Research 
-                Department’s TAL scripting needs. Responsible for the evaluation of commercial piracy protection software and the 
-                integration of the KEYLOK and Sentinel SuperPro security dongles into PinPoint. Was involved in the porting of core 
-                libraries and in-house tools from FreeBSD to Fedora and Windows XP platforms. Was involved in the migration of the 
-                core libraries and in-house tools to higher versions of Intel IPP and QT libraries.</div>
-				
-				<div class="employer" style="padding-top:10px">NEC Telecom Software Philippines, Inc.
-                    &emsp14; &emsp14; &emsp14; &emsp14; &emsp14;
-                    <span class="jobYear">2003 - 2004</span></div>
-                <div class="employerLoc">Cebu, Philippines </div>
-                <div class="jobLabel">Project: &nbsp;
-                    <span>SV-OpS and Hokuden-OpS EMS Applications</span></div>
-                <div class="jobLabel">Role: &nbsp;
-                    <span>Assistant Manager</span></div>
-                <div class="jobLabel">Responsibilities: </div>
-                <div class="responsibilities">Manage SV-OpS and Hokuden-OpS projects. Project management duties include project planning, progress monitoring, 
-				implementation, QA, deployment and maintenance. Direct involvement in all aspects of the SDLC. Design, code, test and 
-				maintain NMSGateway. Implement common XML parser classes. Evaluate JProfiler and incorporate its usage in the development 
-				of SV-OpS.</div>
-
-				
+        <div class="split">
+            <!-- split right start -->
+            <div class="resumeSummaryDiv right">
+                <h4 class="resumeSectionsLabel">PROFESSIONAL SUMMARY</h4>
+                <div style="margin-left:35px;">
+                    <p>
+                        Experienced software developer with a degree in Bachelor of Science in Computer Engineering.
+                        With extensive hands-on experience in the full Software Development Life Cycle. With in-depth
+                        work experience in the development, reverse engineering and maintenance of complex applications
+                        using primarily C/C++ programming language. With working knowledge of the following:
+                    </p>
+                </div>
+                <div style="padding-left:70px;padding-bottom:10px">
+                    <ul>
+                        <li>C++, C, Java Programming Languages</li>
+                        <li>Unix Shell Script, Perl, Tcl/Tk, Expect, WinBatch Scripting languages</li>
+                        <li>Fedora, Red Hat, FreeBSD, Solaris, SunOS, HP-UX, AIX, Windows Operating Systems</li>
+                        <li>Oracle SQL, MySQL, PostgreSQL Databases</li>
+                        <li>HTML, JavaScript</li>
+                        <li>Intel® Integrated Performance Primitives, Libtiff Image Libraries</li>
+                        <li>Standard Template Library</li>
+                        <li>BroadVision One-To-One Commerce</li>
+                        <li>Object-Oriented Analysis/Design</li>
+                        <li>QT, Motif Graphical User Interface Libraries</li>
+                        <li>KEYLOK, Sentinel SuperPro Security Dongles</li>
+                        <li>GDB, Valgrind, JProfiler, Purify Memory Diagnostics/Debugging Tools</li>
+                        <li>Subversion, Visual SourceSafe, ClearCase, Harvest, CVS Source Control Tools</li>
+                        <li>KDevelop, Visual Studio, Eclipse, vi Editors, Notepad++</li>
+                    </ul>
+                </div>
             </div>
+
+
+            <style>
+                .employmentHistory {
+                    padding-top: 18px;
+                    padding-left: 35px;
+                }
+
+                    .employmentHistory > h4 {
+                        font-weight: bold;
+                    }
+
+                .employerRow {
+                    /*font-style: italic;*/
+                    font-weight: bold;
+                    font-size: 15px;
+                    color: #1c948d;
+                }
+
+                .employerName {
+                    font-style: italic;
+                    font-size: 16px;
+                    float: left;
+                }
+
+                .employmentYr {
+                    float: right;
+                    padding-right: 5px;
+                }
+
+                .employerRow:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+
+                .jobLabel {
+                    clear: both;
+                    font-weight: bold;
+                    position: inline-flex;
+                }
+
+                .jobLabelEntry {
+                    font-weight: normal;
+                }
+
+                .jobLabelEntryBold {
+                    font-weight: bold;
+                    color:#757575;
+                }
+
+                .jobCollapsibleSection {
+                    background-color: #d7e4e1;
+                    color: black;
+                    cursor: pointer;
+                    text-align: left;
+                    border: none;
+                    padding-left: 0;
+                    width: 100%;
+                }
+
+                .jobCollasibleActive, .jobCollapsibleSection:hover {
+                    background-color: #feffdc;
+                }
+
+                .jobCollapsibleContent {
+                    /*
+                display: none;
+                overflow: hidden;
+                background-color: #f1f1f1;
+                */
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    hyphens: auto;
+                }
+            </style>
+
+            <div class="resumeEmploymentDiv right">
+                <h4 class="resumeSectionsLabel">EMPLOYMENT HISTORY</h4>
+                <div class="employmentHistory">
+
+                    <!------ employer 1 ------>
+                    <div class="employerRow">
+                        <div class="employerName">Applied Visual Sciences, Inc.</div>
+                        &nbsp;&nbsp;| Herndon, VA
+                        <div class="employmentYr">2005 - 2010</div>
+                    </div>
+                    <div class="jobLabel">
+                        Project: &nbsp;
+                        <span class="jobLabelEntryBold">Airport Security and Healthcare Applications</span>
+                    </div>
+                    <div class="jobLabel">
+                        Role: &nbsp;
+                        <span class="jobLabelEntry">Systems Developer </span>
+                    </div>
+
+                    <!--button type="button" class="jobCollapsibleSection jobLabel">Responsibilities: </button-->
+                    <!--div class="jobCollapsibleContent"-->
+                    <div class="jobLabel">
+                        Responsibilities: &nbsp;
+                        <span class="jobLabelEntry">
+                            Provided technical support to Guardian's software engineering department's programming activities which include
+                            but not limited to the development and maintenance of PinPoint Threat Identification software, Signature Mapping
+                            detection and visualization applications, nSight dynamically linked library (DLL) and Image Processing Engines (IPE).
+                            Performed development and maintenance of QT-based in-house tools used for image collection, scanning device simulation,
+                            testing, scoring and performance validation. Implemented the Support Vector Machine (SVM) and Decision Tree detection
+                            models. Implemented various imaging filters using Intel IPP (Integrated Performance Primitive) library. Added MySQL
+                            database support to PinPoint and in-house tools. Added Tiff image format support into the common image library. Added
+                            the AOI (area-of-interest) and AOILIST data types and their associated application programming interfaces (APIs) to
+                            the Guardian's proprietary TAL (Threat Assessment Language) scripting language. Provided assistance to the Research
+                            Department's TAL scripting needs. Responsible for the evaluation of commercial piracy protection software and the
+                            integration of the KEYLOK and Sentinel SuperPro security dongles into PinPoint. Was involved in the porting of core
+                            libraries and in-house tools from FreeBSD to Fedora and Windows XP platforms. Was involved in the migration of the
+                            core libraries and in-house tools to higher versions of Intel IPP and QT libraries.
+                        </span>
+                    </div>
+                    <div class="jobLabel">
+                        Environment: &nbsp;
+                        <span class="jobLabelEntry">
+                            C, C++, QT 4.5.2, Libtiff, Intel® IPP 6.0, KEYLOK II, Sentinel SuperPro 6.3, GDB, valgrind, svn, gcc, g++, Perl,
+                            shell scripting, WinBatch, K Desktop Environment, KDevelop, Fedora 11, FreeBSD 6.3, Windows XP
+                        </span>
+                    </div>
+
+                    <!-------- employer 2 -------->
+                    <br />
+                    <div class="employerRow">
+                        <div class="employerName">NEC Telecom Software Philippines, Inc.</div>
+                        &nbsp;&nbsp; | Cebu, Philippines
+                        <div class="employmentYr">2003 - 2004</div>
+                    </div>
+                    <div class="jobLabel">
+                        Project: &nbsp;
+                        <span class="jobLabelEntryBold">SV-OpS and Hokuden-OpS EMS Applications</span>
+                    </div>
+                    <div class="jobLabel">
+                        Role: &nbsp;
+                        <span class="jobLabelEntry">Team Lead</span>
+                    </div>
+                    <div class="jobLabel">
+                        Responsibilities: &nbsp;
+                        <span class="jobLabelEntry">
+                            Manage SV-OpS and Hokuden-OpS projects. Project management duties include project planning, progress
+                            monitoring, implementation, QA, deployment and maintenance. Direct involvement in all aspects of the
+                            SDLC. Design, code, test and maintain NMSGateway. Implement common XML parser classes. Evaluate
+                            JProfiler and incorporate its usage in the development of SV-OpS.
+                        </span>
+                    </div>
+                    <div class="jobLabel">
+                        Environment: &nbsp;
+                        <span class="jobLabelEntry">
+                            Java, sockets, rmi, Log4j, SOAP, Jakarta Tomcat, PostgreSQL, XML, Linux, Windows XP/2000, Eclipse,
+                            Visual SourceSafe, JProfiler, Visio, Excel
+                        </span>
+                    </div>
+
+                    <!-------- employer 3 -------->
+                    <br />
+                    <div class="employerRow">
+                        <div class="employerName">Securities Industry Automation Corporation</div>
+                        &nbsp;&nbsp; | Brooklyn, NY
+                        <div class="employmentYr">2000 - 2002</div>
+                    </div>
+                    <div class="jobLabel">
+                        Project: &nbsp;
+                        <span class="jobLabelEntryBold">Market Data Applications</span>
+                    </div>
+                    <div class="jobLabel">
+                        Role: &nbsp;
+                        <span class="jobLabelEntry">Consultant Developer to Market Data Distribution (MDD) Group</span>
+                    </div>
+                    <div class="jobLabel">
+                        Responsibilities: &nbsp;
+                        <span class="jobLabelEntry">
+                            Provided technical support to the MDD development team's programming activities which focuses on
+                            the development and maintenance of New York Stock Exchange (NYSE) market data applications.
+                            Involved in the development of the Publisher Message Proxy (PuMP) and Value Added Component (VAC)
+                            projects. Tasked with the implementation of the black box test infrastructure using Tcl and Expect
+                            to automate regression testing of the PuMP and VAC applications.
+                        </span>
+                    </div>
+                    <div class="jobLabel">
+                        Environment: &nbsp;
+                        <span class="jobLabelEntry">
+                            C++, HP-UX 11, STL, Talarian SmartSockets, Perl, Tcl/Expect, Xerces-C++ XML Parser, MySQL, ClearCase
+                        </span>
+                    </div>
+
+                    <!-------- employer 4 -------->
+                    <br />
+                    <div class="employerRow">
+                        <div class="employerName">Fingerhut Companies, Inc.</div>
+                        &nbsp;&nbsp; | Plymouth, MN
+                        <div class="employmentYr">1998 - 2000</div>
+                    </div>
+                    <div class="jobLabel">
+                        Project 1: &nbsp;
+                        <span class="jobLabelEntryBold">Fingerhut’s E-Commerce Development and Maintenance</span>
+                    </div>
+                    <div class="jobLabel">
+                        Role: &nbsp;
+                        <span class="jobLabelEntry">Consultant Developer</span>
+                    </div>
+                    <div class="jobLabel">
+                        Responsibilities: &nbsp;
+                        <span class="jobLabelEntry">
+                            Provided technical support to the E-Commerce programming activities which include but are not
+                            limited to the development and maintenance of Fingerhut's BroadVision-powered websites. Maintenance
+                            of back end database applications used in extracting orders, requests for catalog and credit
+                            applications. These extract applications utilize BroadVision objects for its database access and
+                            the MQSeries Message Queue Interface (MQI) for transporting data to another system. Developed purge
+                            scripts using SQL and C shell scripting to clean the database of invalid/incomplete entries. Developed
+                            scripts to automate the feed file generation and upload to other online merchants to which Fingerhut
+                            is an affiliate. Train and assist new members in the intricacies of web site development and maintenance.
+                        </span>
+                    </div>
+                    <div class="jobLabel">
+                        Environment: &nbsp;
+                        <span class="jobLabelEntry">
+                            C++, Solaris, Oracle SQL Server, SQL Plus, SQL Loader, RougeWave, JavaScript, HTML, Harvest
+                        </span>
+                    </div>
+
+                    <div class="jobLabel" style="margin-top:5px">
+                        Project 2: &nbsp;
+                        <span class="jobLabelEntryBold">Name In Transition Segmentation Scoring (NITSS)</span>
+                    </div>
+                    <div class="jobLabel">
+                        Role: &nbsp;
+                        <span class="jobLabelEntry">Consultant Developer</span>
+                    </div>
+                    <div class="jobLabel">
+                        Responsibilities: &nbsp;
+                        <span class="jobLabelEntry">
+                            Performed requirement analysis, design, coding and testing. NITSS is a scoring system designed to
+                            assist Fingerhut's Marketing Department in rendering good mailing decisions concerning its
+                            different sales projects to its revolving charge and close end customers based upon gross response
+                            considerations and advertising budget constraints. The system also generates reports used in
+                            forecasting literature needs and in evaluating Fingerhut's sales projects. The system was developed
+                            using the C programming language with embedded SQL code for its database access.
+                        </span>
+                    </div>
+                    <div class="jobLabel">
+                        Environment: &nbsp;
+                        <span class="jobLabelEntry">
+                            C, Pro*C, AIX 4.2.1, Oracle, SQL
+                        </span>
+                    </div>
+
+                    <!-------- employer 5 -------->
+                    <br />
+                    <div class="employerRow">
+                        <div class="employerName">NEC Technologies Philippines, Inc.</div>
+                        &nbsp;&nbsp; | Cebu, Philippines
+                        <div class="employmentYr">1992 - 1998</div>
+                    </div>
+                    <div class="jobLabel">
+                        Project 1: &nbsp;
+                        <span class="jobLabelEntryBold">NMS Applications for NEC D Series Switching Hubs</span>
+                    </div>
+                    <div class="jobLabel">
+                        Role: &nbsp;
+                        <span class="jobLabelEntry">Team Lead</span>
+                    </div>
+                    <div class="jobLabel">
+                        Responsibilities: &nbsp;
+                        <span class="jobLabelEntry">
+                            Coordinate a team of 7 software engineers developing two projects as well as perform design, coding
+                            and testing. Solely responsible for the SNMP component of the Web-based Device Management System.
+                            The system is designed to allow network administrators to remotely manage the NEC D series switching
+                            hubs and other LAN products supporting MIB-II.
+                        </span>
+                    </div>
+                    <div class="jobLabel">
+                        Environment: &nbsp;
+                        <span class="jobLabelEntry">
+                            Advent SNMP, Java 1.1 Platform, Solaris, Windows NT, Windows 95, CVS
+                        </span>
+                    </div>
+
+                    <div class="jobLabel" style="margin-top:5px">
+                        Project 2: &nbsp;
+                        <span class="jobLabelEntryBold">Maintenance of EtherStar NMS Application</span>
+                    </div>
+                    <div class="jobLabel">
+                        Role: &nbsp;
+                        <span class="jobLabelEntry">Team Lead</span>
+                    </div>
+                    <div class="jobLabel">
+                        Responsibilities: &nbsp;
+                        <span class="jobLabelEntry">
+                            Maintenance of NEC EtherStar NMS application and porting it from SunOS to the Solaris platform. EtherStar
+                            is networking equipment that provides Ethernet and ATM connectivity. The EtherStar NMS application performs
+                            configuration, administration, statistics collection, event monitoring and control of the EtherStar equipment.
+                            It is an X Window-based application that runs on top of HP OpenView for the UNIX platform.
+                        </span>
+                    </div>
+                    <div class="jobLabel">
+                        Environment: &nbsp;
+                        <span class="jobLabelEntry">
+                            C, Motif, HP OpenView, SunOS, Solaris
+                        </span>
+                    </div>
+
+                    <div class="jobLabel" style="margin-top:5px">
+                        Project 3: &nbsp;
+                        <span class="jobLabelEntryBold">NMS Platform Maintenance</span>
+                    </div>
+                    <div class="jobLabel">
+                        Role: &nbsp;
+                        <span class="jobLabelEntry">Team Lead</span>
+                    </div>
+                    <div class="jobLabel">
+                        Responsibilities: &nbsp;
+                        <span class="jobLabelEntry">
+                            Lead a team of six software engineers as well as perform coding and testing. The team is
+                            responsible for the maintenance of the User Interface (UI) modules of the NMS Platform,
+                            as well as perform bug fixes and version upgrades upon requests from NMS Platform customers.
+                            The NMS Platform is originally developed by NEC Japan. In preparation for the NMS
+                            Platform maintenance, the team did a reverse engineer of the platform. Uses Object Modeling
+                            Technique (OMT) methodology and tool in the design recovery process.
+                        </span>
+                    </div>
+                    <div class="jobLabel">
+                        Environment: &nbsp;
+                        <span class="jobLabelEntry">
+                            C++, InterViews, OMT, EWS-UX/V 4.0 (NEC version of UNIX System V Release 4), NEC EWS 4800 series
+                        </span>
+                    </div>
+
+                    <div class="jobLabel" style="margin-top:5px">
+                        Project 4: &nbsp;
+                        <span class="jobLabelEntryBold">Total Window Interface for Network Services (TWINS)</span>
+                    </div>
+                    <div class="jobLabel">
+                        Role: &nbsp;
+                        <span class="jobLabelEntry">Developer</span>
+                    </div>
+                    <div class="jobLabel">
+                        Responsibilities: &nbsp;
+                        <span class="jobLabelEntry">
+                            Created requirement specifications, and performed design, coding, unit testing and integration testing.
+                            TWINS is a demonstration program of NEC’s Network Management System (NMS) that depicts the management
+                            of the hybrid network of NEC Japan and its subsidiaries.
+                        </span>
+                    </div>
+                    <div class="jobLabel">
+                        Environment: &nbsp;
+                        <span class="jobLabelEntry">
+                            C++, InterViews, OMT, EWS-UX/V 4.0 (NEC version of UNIX System V Release 4), NEC EWS 4800 series, SCCS
+                        </span>
+                    </div>
+
+                    <div class="jobLabel" style="margin-top:5px">
+                        Project 5: &nbsp;
+                        <span class="jobLabelEntryBold">Software Product Management System (SPMS) </span>
+                    </div>
+                    <div class="jobLabel">
+                        Role: &nbsp;
+                        <span class="jobLabelEntry">Developer</span>
+                    </div>
+                    <div class="jobLabel">
+                        Responsibilities: &nbsp;
+                        <span class="jobLabelEntry">
+                            Performed coding and unit testing of the pie chart feature. The SPMS system was designed to improve
+                            software production as well as cost control of software contractors. Its main function is to help
+                            Section and Department managers to view and analyze business results regarding different software products.
+                        </span>
+                    </div>
+                    <div class="jobLabel">
+                        Environment: &nbsp;
+                        <span class="jobLabelEntry">
+                            C++, MS-DOS
+                        </span>
+                    </div>
+
+                    <div class="jobLabel" style="margin-top:5px">
+                        Project 6: &nbsp;
+                        <span class="jobLabelEntryBold">Abstract Syntax Notation .1 Syntax Generator  </span>
+                    </div>
+                    <div class="jobLabel">
+                        Role: &nbsp;
+                        <span class="jobLabelEntry">Test Engineer</span>
+                    </div>
+                    <div class="jobLabel">
+                        Responsibilities: &nbsp;
+                        <span class="jobLabelEntry">
+                            Performed manual testing of the Abstract Syntax Notation .1 Syntax Generator. The ASN.1 SG  is a tool
+                            that translates a C-like format into an ASN.1 syntax.
+                        </span>
+                    </div>
+                    <div class="jobLabel">
+                        Environment: &nbsp;
+                        <span class="jobLabelEntry">
+                            MS-DOS
+                        </span>
+                    </div>
+                </div>
+                <br>
+            </div>  <!-- split right end -->
         </div>
-		
 
+        <div id="contactSection" style="padding-bottom:0px"></div>
 
+        <footer>
+            <div class="footerSectionDiv" style="width:100%; height:80px; position:inline-flex">
+                <img src="images/erin-art-002d.jpg" width="25%" height="80px" style="position:absolute;z-index:-1;">
+                <img src="images/corie-bw-id-sm-00.jpg" height="80px"
+                     style="margin-left:22%;border-radius:50%;border-width:7px;border-color:rgba(248, 244, 244, 0.393);border-style:solid;">
+                <div class="footerSectionDivLbl">
+                    <h1>CORINA VILLAVICENCIO</h1>
+                    <h2>Software Developer</h2>
+                </div>
+            </div>
+        </footer>
 
-    </div>  <!-- split right end -->
+        <script src="fade_out.js" type="text/javascript"></script>
 
-</div>
+        <script type="text/javascript">
 
-<div id="contactSection" style="padding-bottom:50px"></div>
+        /** -- Slideshow - start --
+         * This javascript simply automates the slideshow by checking the
+         * st to last radio button in 3 seconds interval. Goes back to the
+         * 1st after the 4th
+         */
+        var counter = 1;
 
-<footer>
-    <div class="footerSectionDiv" style="width:100%; height:80px; position:inline-flex">
-        <img src="images/erin-art-002d.jpg" width="25%" height="80px" style="position:absolute;z-index:-1;"></img>
-        <img src="images/corie-bw-id-sm-00.jpg" height="80px"
-         style="margin-left:22%;border-radius:50%;border-width:7px;border-color:rgba(248, 244, 244, 0.393);border-style:solid;"></img>
-		<div class="footerSectionDivLbl">
-			<h1>CORINA VILLAVICENCIO</h1>
-			<h2>Software Developer</h2>
-		</div>
-	</div>
-</footer>
+        function setCounter(val) {
+            /*console.log("setCounter(" + val + ")");*/
+            const manualButtonArr = document.getElementsByClassName("manual-btn");
+            /*console.log("setCounter: manualButtonArr.length=" + manualButtonArr.length);*/
+
+            if (val > 0 && val < 6) {
+                counter = val;
+                for (let i = 0; i < manualButtonArr.length; i++) {
+                    manualButtonArr[i].style.background = "";
+                }
+                manualButtonArr[val - 1].style.background = "#f2f9a8";
+            }
+        }
+
+        setInterval(
+            function () {
+                setCounter(counter);
+                document.getElementById('radio' + counter).checked = true;
+                counter++;
+                if (counter > 5) { counter = 1; }
+            },
+            3000);
+        /*-- Slideshow - end --*/
+
+        /*-- Collapsible Resume Entries - start --*/
+        var collapsibleArray = document.getElementsByClassName("jobCollapsibleSection");
+        var i;
+        var htmlElement;
+
+        for (i = 0; i < collapsibleArray.length; i++) {
+            htmlElement = collapsibleArray[i];
+            htmlElement.addEventListener("click",
+                function () {
+                    this.classList.toggle("jobCollasibleActive");
+                    var contentElement = this.nextElementSibling;
+                    if (contentElement.style.display === "block")
+                        contentElement.style.display = "none";
+                    else
+                        contentElement.style.display = "none";
+                }
+            )
+        }
+        /*-- Collapsible Resume Entries - end --*/
+
+        </script>
 
 </body>
 </html>

@@ -27,7 +27,7 @@ a:hover {
     font-weight: normal;
 }
 
-.headerLbl1, headerBtn {
+.headerLbl1, .headerBtn {
     font-family: 'Thasadith', sans-serif;
     font-variant: small-caps;
     font-size: 20px;
